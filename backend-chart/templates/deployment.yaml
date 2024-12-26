@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      type: backend
+  template:
+    metadata:
+      labels:
+        type: backend
+    spec:
+      containers:
+      - name: container1
+        image: docman404/pythonapp1
+        ports:
+        - containerPort: 4000
