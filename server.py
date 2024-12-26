@@ -8,9 +8,9 @@
 
 #app.run(host="0.0.0.0", port=4000)
 
-#from flask import Flask, render_template_string
+from flask import Flask, render_template_string
 
-#app = Flask(__name__)
+app = Flask(__name__)
 
 # Define an HTML template for better UI
 html_template = """
